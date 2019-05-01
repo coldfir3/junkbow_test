@@ -1,7 +1,7 @@
 rm(list = ls())
 library(tidyverse)
 
-df = read.csv("D:/Creative Cloud Files/Projects/tests/junkbow/dispersion.csv", header = TRUE) %>% as.tibble
+df = read.csv("~/dispersion.csv", header = TRUE) %>% as.tibble
 names(df) <- c('Weapon', 'Distance', 'Damage')
 
 df <- mutate(df, Distance = (8 - Distance)*4) %>% split(.$Weapon)
